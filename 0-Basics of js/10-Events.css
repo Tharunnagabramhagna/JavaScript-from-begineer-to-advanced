@@ -1,0 +1,24 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+#hiddenpara {
+    background-color: aquamarine;
+    color: black;
+    margin: 10px;
+}
