@@ -87,7 +87,7 @@ const student = {
     name: "Arjun Kumar",
     age: 19,
     cgpa: 9.4,
-    ispass: true
+    isPass: true
 };
 console.log(student);
 console.log(typeof student.name);
@@ -99,5 +99,7 @@ console.log(student["age"]);
 
 // To increase any value of object use the below method.
 
-student["age"] += 1;  // (or) student["age"] = student["age"] + 1
+student["age"] += 1;  
+// (or) 
+student["age"] = student["age"] + 1
 console.log(student.age);
