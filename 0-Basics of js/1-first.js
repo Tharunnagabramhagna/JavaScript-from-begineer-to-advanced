@@ -6,7 +6,7 @@
 // Type "!" to get boilerplate code in vs code.
 // We need to open the html file in our system to run the code in browser.
 
-console.log("Hello World!"); // output => Hello World
+console.log("Hello World!"); // output => Hello World!
 console.log("Tharun is learning Javascript");
 console.log("I love my Mother");
 alert("Warning!");
