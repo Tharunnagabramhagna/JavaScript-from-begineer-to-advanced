@@ -1,6 +1,13 @@
 // 1) For Loop
 
-// Example-1) Count from 1 to 5
+// Example-1) Print "Tony Stark" 10 times
+
+for(let i = 0; i < 10; i++)
+    console.log("Tony Stark");
+
+console.log("Tony : Ok bye,See you later");
+
+// Example-2) Count from 1 to 5
 for (let count = 1; count <= 5; count++) {
     console.log("Count =", count);
 } // count++ => count = count + 1
@@ -63,9 +70,9 @@ let student = {
     cgpa: 9.2,
     ispass: true
 };
-for (let key in student) {
+for (let key in student)
     console.log("key =", key, ", value =", student[key]);
-}
+
 
 // Practice Question
 
@@ -73,20 +80,18 @@ for (let key in student) {
 
 // Ans)
 for (let i = 0; i <= 100; i++) {
-    if (i % 2 === 0) {
+    if (i % 2 === 0)
         console.log("i =", i);
-    }
 }
 
 /* 2) Create a game where you start with any random game number.Ask the 
 user to keep guessing the game number until the user enters the correct value. */
 
-let gameNumber = 25;
+let gameNumber = 19;
 let userInput = prompt("Guess the number:");
 
-while (userInput != gameNumber) {
+while (userInput != gameNumber)
     userInput = prompt("You guessed the wrong number.guess again:");
-}
 
 console.log(userInput);
 console.log("Congratulations,You entered the right number.");

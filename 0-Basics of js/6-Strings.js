@@ -15,7 +15,7 @@ console.log(str[3]);
 let specialString = `This is a template literial,1+2+3 = ${1 + 2 + 3}`;
 console.log(specialString);
 console.log(typeof specialString);
-// We can even do maths operations in this template literials
+// We can also do maths operations in this template literials
 
 // Use of template literials
 let obj = {
@@ -56,13 +56,13 @@ console.log(`This is a ${str1.concat(str2)} movie`);
 str = "Hello"; // 6) Replace any part of string
 console.log(str.replace("lo", "p"));
 str = "Hellololo";
-console.log(str.replaceAll("lo", "p"));
+console.log(str.replaceAll("lo", "p")); // Replaces all characters 
 
-str = "IloveJS"; // 7) Find any character in strinf
+str = "IloveJS"; // 7) Find any character in string
 console.log(str.charAt(3)); // o/p => v
 console.log(str.charAt(1)); // o/p => l
 
-let browserType = "firefox"; // 7) Include method
+let browserType = "firefox"; // 8) Include method
 
 if (browserType.includes("fox")) {
     console.log("Found fox!");
@@ -70,29 +70,29 @@ if (browserType.includes("fox")) {
     console.log("No fox here!");
 };
 
-browserType = "mozilla"; // 8) startsWith method
+browserType = "Chrome"; // 9) startsWith method
 
-if (browserType.startsWith("mo")) {
-    console.log("Found mo!");
+if (browserType.startsWith("Ch")) {
+    console.log("Found Ch!");
 } else {
-    console.log("No mo here!");
+    console.log("No Ch here!");
 };
 
-let fruitName = "pineapple" // 9) endsWith method 
+let fruitName = "pineapple" // 10) endsWith method 
 
 if (fruitName.endsWith("apple")) {
     console.log("Found apple!");
 } else {
     console.log("No apple here!");
 };
-/* 10) You can find the position of a substring 
+
+/* 11) You can find the position of a substring 
 inside a larger string using the indexOf(). */
 
 let tagline = "Javascript is used by web developers and app developers";
 
 console.log(tagline.indexOf("developers")); // 26
 console.log(tagline.indexOf("x")); // -1
-
 /* This returns -1 because the character
 x is not present in the string. */
 
@@ -109,7 +109,7 @@ console.log(str3);
 /* The above string wouldn't change because strings are immutable
  so, we use replace method in this case.*/
 
-// Practice Question
+/* Practice Question */
 
 /* Prompt the user to enter their full name. Generate a username for
 them based on the input.Start username with @,followed by their full name

@@ -4,7 +4,7 @@
 /* 2) This is a multi-line
 comment */
 
-// Arithemetic Operators
+// Arithemetic Operators //
 let a = 9;
 let b = 3;
 console.log("a =", a, "& b =", b);
@@ -29,7 +29,7 @@ console.log("b =", --b); // (pre order)
 /* Post order means first it will print the value then it follows the command.
 but,in pre order it first follows the command and then prints the value */
 
-// Assignment Operators
+// Assignment Operators //
 // 1) "=" operator eg:- a = 8
 // remaining operators are:-
 let c = 7
@@ -43,18 +43,18 @@ c /= 6;
 console.log("c =", c);
 c %= 3;
 console.log("c =", c);
-c **= 2;
+c **= 2; // c = c ** 2
 console.log("c =", c);
 
-// Comparsion Operators
+// Comparsion Operators //
 
 a = 10;
 b = 6;
 console.log("a == b is", a == b); // false
 console.log("a != b is", a != b); // true
 a = 10; // number
-b = "10"; // string => number
-console.log("a == b is", a == b); // true
+b = "10"; // string
+console.log("a == b is", a == b); // true (not strictly checking for different datatypes)
 console.log("a === b is", a === b); // strict operator so the o/p is false
 console.log("a != b is", a != b); // false
 console.log("a !== b is", a !== b); // true due to strict operator
@@ -68,7 +68,7 @@ b = 9
 console.log("a <= b is", a <= b); // true
 console.log("a >= b is", a >= b); // true
 
-// Logical Operators
+// Logical Operators //
 
 a = 10;
 b = 10;
