@@ -2,8 +2,12 @@
 /* #heading can also be written as "h1".*/
 /* Even h1 is same but id is unique. */
 
+body {
+    background-color: red;
+}
+
 #box {
-    height: 390px;
+    height: 430px;
     width: 200px;
     border: 1px solid black;
     background-color: green;
@@ -38,10 +42,6 @@
 .header-class {
     color: brown;
     background-color: white;
-}
-
-body {
-    background-color: orange;
 }
 
 button {

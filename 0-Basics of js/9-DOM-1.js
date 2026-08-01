@@ -2,14 +2,15 @@
 console.log("This is a JS file");
 alert("Hello!");
 
-// Window object
+// Window object //
 // This is a global object
 // All the js code is stored here
+console.log(window);
 window.console.log("Hello window!");
-// Even our file knows that window exists.
+// our file knows that window exists.
 
 // To see the code of html
-console.log(window.document);
+console.log(window.document); // Try this on console for better experience
 // To see document properties
 console.dir(window.document);
 // Access the document properties
@@ -21,15 +22,18 @@ console.dir(document.body.childNodes[1]);
 // To change any thing on html
 // Can be written directly in browser console
 // This type of changes are called Dynamic Changes
-// console.dir(document.body.style.background = "red");
+console.dir(document.body.style.background = "orange"); // red => orange
+document.body.childNodes[3].innerText = "DOM docx"; // change text in a tag
 
-// DOM MANIPULATION
+// DOM MANIPULATION //
 
 // 1) Selecting with id
+// Default Value => null
 let heading = document.getElementById("heading"); // h1
 console.dir(heading);
 
 // 2) Selecting many with class
+// Default Value => empty collection
 let headings = document.getElementsByClassName("header-class");
 console.dir(headings);
 console.log("Headings by class =", headings);
@@ -39,10 +43,12 @@ let paragraph = document.getElementsByTagName("p");
 console.dir(paragraph);
 
 // 4) Query Selector
+// Default Value => null
 
 // Gives first element
 let firstElement = document.querySelector("p");
 console.dir(firstElement);
+
 // Gives All elements
 let allElements = document.querySelectorAll("p");
 console.dir(allElements); // returns a Node list
@@ -62,6 +68,8 @@ console.log(heading.tagName);
 console.log(firstElement.tagName);
 
 // Children Nodes topic
+console.dir(document.body.firstChild);
+console.dir(document.body.lastChild);
 console.dir(document.body.children[0]);
 console.dir(document.querySelector("div").children);
 
