@@ -1,5 +1,5 @@
 .content {
-    color: aqua;
+    color: white;
     background-color: black;
 }
 
@@ -12,6 +12,6 @@ body {
 }
 
 .newClass {
-    color: green;
+    color: aqua;
     font-style: italic;
 }
