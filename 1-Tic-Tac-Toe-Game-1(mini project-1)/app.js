@@ -4,7 +4,7 @@ let newGameButton = document.querySelector("#newgame");
 let turnX = true; // PlayerX / PlayerO => PlayerX is first
 let gameActive = true;
 
-/* winning patterns are stores in a 2D-array */
+// winning patterns are stores in a 2D-array
 const winPatterns = [
     [0, 1, 2],
     [0, 3, 6],
@@ -116,4 +116,3 @@ const highlightBoxes = (a, b, c) => {
     boxes[b].style.backgroundColor = "lightgreen";
     boxes[c].style.backgroundColor = "lightgreen";
 };
-
