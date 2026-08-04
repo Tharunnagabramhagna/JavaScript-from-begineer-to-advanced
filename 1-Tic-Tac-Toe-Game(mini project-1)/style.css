@@ -12,17 +12,24 @@ body {
     text-align: center;
 }
 
+/* game description : we took 70% of screen for the container then placed
+60% of the game in the container with 18% for each box */
+
 .container {
-    height: 70vh;
+    /* vh => viewport height */
+    height: 70vh; /* 70vh = 480px & 1vh = 6.8px (for my screen) */
     display: flex;
+    /* center in the main container */
     justify-content: center;
     align-items: center;
 }
 
 .game {
-    height: 60vmin;
-    width: 60vmin;
+    /* vmin => veiwport minimum */
+    height: 60vmin; /* 1vmin = 7px (depends on screen size) */
+    width: 60vmin; /* 60vmin = 411px (for my screen) */
     display: flex;
+    /* Center in the game */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -32,20 +39,20 @@ body {
 .box {
     height: 18vmin;
     width: 18vmin;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
-    font-size: 8vmin;
+    font-size: 8vmin; /* 56px */
     color: #ffb703;
     background-color: #412234;
 }
 
 #reset-but {
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     background-color: #c1121f;
     color: white;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     border: none;
 }
 
@@ -53,10 +60,8 @@ body {
     padding: 1rem;
     font-size: 1rem;
     background-color: #53F4FF;
-    color: black;
     border-radius: 1rem;
     border: none;
     display: flex;
-    align-items: flex-end;
     margin: 5px;
 }
