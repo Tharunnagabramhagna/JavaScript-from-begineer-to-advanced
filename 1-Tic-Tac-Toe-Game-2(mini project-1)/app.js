@@ -3,8 +3,26 @@
 let boxes = document.querySelectorAll(".box");
 let newGameBtn = document.querySelector("#new-game-btn");
 let resetGameBtn = document.querySelector("#reset-btn");
+let changeMode = document.querySelector("#change-mode");
 let turnX = true;
 let gameActive = true;
+
+// initialize theme from localStorage
+// localStorage => Stores the current theme even after page refreshed
+// Purpose => Restore the changes made by user when user re-opens the website
+// DarkMode is a notebook of localStorage to store boolean values in this code
+const saved = localStorage.getItem("darkMode");
+if (saved === "true") {
+    // Creates dark-mode class name to body
+    document.body.classList.add("dark-mode");
+}
+
+// Purpose => Reacts to the user click on the website
+changeMode.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark-mode");
+    changeMode.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("darkMode", isDark);
+});
 
 const winPatterns = [
     [0, 1, 2],
@@ -77,14 +95,16 @@ const resetGame = () => {
 }
 
 const newGame = () => {
-    if(!gameActive)
+    if (!gameActive)
         resetGame();
-    else 
+    else
         alert("You can't start a new game while current game runs!");
 }
 
-resetGameBtn.addEventListener("click",resetGame);
-newGameBtn.addEventListener("click",newGame);
+resetGameBtn.addEventListener("click", resetGame);
+// safe-handling the case for index2
+if (newGameBtn)
+    newGameBtn.addEventListener("click", newGame);
 
 const highlightBoxes = (a, b, c) => {
     boxes[a].style.backgroundColor = "#E6C229";
