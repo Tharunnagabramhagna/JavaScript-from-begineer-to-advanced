@@ -7,17 +7,21 @@
 h1 {
     background-color: #001D4A;
     color: white;
-    height: 5rem;
-    line-height: 5rem;
+    margin-top: 10px;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    border-radius: 50px;
+    border: 2px solid black;
+    cursor: default;
 }
 
 body {
-    background-color: #F75C03;
+    background-color: #0f3038;
 }
 
 .choice {
-    height: 165px;
-    width: 165px;
+    height: 160px;
+    width: 160px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -26,7 +30,7 @@ body {
 
 .choice:hover {
     cursor: pointer;
-    background-color: #49111c;
+    background-color: #282cfc;
 }
 
 img {
@@ -51,6 +55,7 @@ img {
     font-size: 2rem;
     margin-top: 3rem;
     gap: 5rem;
+    cursor: default;
 }
 
 #user-score,
@@ -65,8 +70,38 @@ img {
 #msg {
     background-color: black;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: inline;
-    padding: 1rem;
+    padding: 0.5rem;
     border-radius: 1rem;
+    pointer-events: none;
+}
+
+.draw-container {
+    background-color: white;
+    /* This is better option than height */
+    /* chnages according to the text */
+    padding: 20px;
+    /* condition for larger screen like laptop */
+    /* if width > 300 => width becomes 300 */
+    max-width: 300px;
+    /* use for smaller screens like phones */
+    width: 90%;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    position: fixed;
+    top: 20px;
+    /* center the div */
+    /* move the div to 50% of left (center of screen) */
+    left: 50%;
+    /* div width : 300px 
+    div center : 150px
+    so, 300px-50% = 150px */
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.draw-container p {
+    font-size: 18px; /* professional way of writing code */
 }
