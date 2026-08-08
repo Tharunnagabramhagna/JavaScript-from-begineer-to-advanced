@@ -7,44 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main Heading Bar -->
-    <h1>Rock Paper Scissors</h1>
+    <header>
+        <!-- Main Heading Bar -->
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main>
+        <!-- Images displayed on webpage -->
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="./images/rock.png">
+            </div>
+            <div class="choice" id="paper">
+                <img src="./images/paper.png">
+            </div>
+            <div class="choice" id="scissors">
+                <img src="./images/scissors.png">
+            </div>
+        </div>
 
-    <!-- Images displayed on webpage -->
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="./images/rock.png">
+        <!-- Score Board -->
+        <div class="score-board">
+            <div class="score">
+                <p id="user-score">0</p>
+                <p>You</p>
+            </div>
+            <div class="score">
+                <p id="computer-score">0</p>
+                <p>Computer</p>
+            </div>
         </div>
-        <div class="choice" id="paper">
-            <img src="./images/paper.png">
-        </div>
-        <div class="choice" id="scissors">
-            <img src="./images/scissors.png">
-        </div>
-    </div>
 
-    <!-- Score Board -->
-    <div class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <p>You</p>
+        <!-- Game Result Message -->
+        <div class="msg-container">
+            <p id="msg">Play your move</p>
         </div>
-        <div class="score">
-            <p id="computer-score">0</p>
-            <p>Computer</p>
+
+        <!-- Overlay for Draw Toast -->
+        <div id="overlay"></div>
+
+        <!-- Toast Notification of Draw -->
+        <div id="draw-toast" class="draw-container">
+            <p>🤝It's a 𝐝𝐫𝐚𝐰</p>
+            <p>Try Again!</p>
         </div>
-    </div>
-
-    <!-- Game Result Message -->
-    <div class="msg-container">
-        <p id="msg">Play your move</p>
-    </div>
-
-    <!-- Toast Notification of Draw -->
-    <div id="draw-toast" class="draw-container">
-        <p>🤝It's a 𝐝𝐫𝐚𝐰</p>
-        <p>Try Again!</p>
-    </div>
+    </main>
 
     <script src="app.js"></script>
 </body>

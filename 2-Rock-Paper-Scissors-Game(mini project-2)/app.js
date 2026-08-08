@@ -4,6 +4,7 @@ let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
+const overlay = document.querySelector("#overlay");
 const drawToast = document.querySelector("#draw-toast");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#computer-score");
@@ -22,24 +23,36 @@ const genCompChoice = () => {
 const drawGame = () => {
     msg.innerText = "🙇𝑺𝒐𝒓𝒓𝒚,It was a 𝐝𝐫𝐚𝐰.Try again!";
     msg.style.backgroundColor = "yellowgreen";
-    /* Display the toast for 2 seconds */
-    drawToast.style.opacity = 1;
-    /* toast is again hidden after 2 seconds */
+
+    // Reset toast to initial hidden position and show overlay
+    drawToast.classList.remove("show");
+    overlay.style.visibility = "visible";
+
+    // On the next browser rendering frame, add show
+    requestAnimationFrame(() => {
+        drawToast.classList.add("show");
+    });
+
+    // Keep visible for about 2 seconds, then hide with slide-up animation
     setTimeout(() => {
-        drawToast.style.opacity = 0;
-    }, 2000)
+        // the toast comes to it's original pos (slide down)
+        drawToast.classList.remove("show");
+        // as the transition is 0.35s => 350ms we ask js for time to animate
+        // after 350ms => slide up again
+        setTimeout(() => {
+            overlay.style.visibility = "hidden";
+        }, 350);
+    }, 2000);
 };
 
 // To show Winner of Game
 const showWinner = (userWin, userChoice, compChoice) => {
     if (userWin) {
-        userScore++; // increment score of user
-        userScorePara.innerText = userScore;
+        userScorePara.innerText = ++userScore; // increment score + change text
         msg.innerText = `🏆You 𝒘𝒐𝒏 the round.Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "darkgreen";
     } else {
-        compScore++; // increment score of comp
-        compScorePara.innerText = compScore;
+        compScorePara.innerText = ++compScore; // increment score + change text
         msg.innerText = `🥺You 𝑳𝑶𝑺𝑻 the round.${compChoice} beats your ${userChoice}`;
         msg.style.backgroundColor = "orangered";
     }
@@ -65,7 +78,7 @@ const playGame = (userChoice) => {
         else // userChoice === "scissors"
             // rock and paper case
             userWin = compChoice === "rock" ? false : true;
-        
+
         showWinner(userWin, userChoice, compChoice);
     }
 };
@@ -73,8 +86,10 @@ const playGame = (userChoice) => {
 // To track choices
 choices.forEach((choice) => {
     choice.addEventListener("click", () => {
+        // get choice id (e.g. id="rock" => userChoice = rock)
         const userChoice = choice.getAttribute("id");
         console.log("choice was clicked that is", userChoice);
+        // game is started
         playGame(userChoice);
     });
 });
